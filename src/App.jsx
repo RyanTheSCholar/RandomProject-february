@@ -24,7 +24,7 @@ export default function App() {
         delay: Math.round(Math.random() * 2000),
         duration: 3200 + Math.round(Math.random() * 2600),
       })),
-    []
+    [],
   );
 
   function clamp(n, min, max) {
@@ -180,12 +180,22 @@ export default function App() {
                 </h2>
               </div>
 
-              <div className="mt-4 rounded-2xl bg-[#FFFDF7] p-4 text-left ring-1 ring-[#EAD9CF]">
-                <div className="mt-1 text-sm leading-relaxed text-[#6B4C55] text-center">
-                  {dateDetails}
+              <div className="mt-5 flex justify-center">
+                <div className="relative max-w-sm rounded-3xl bg-gradient-to-br from-white/90 to-[#FFF7F0] px-6 py-5 shadow-md">
+                  {/* bubble tail */}
+                  <div className="absolute -bottom-2 left-1/2 h-4 w-4 -translate-x-1/2 rotate-45 bg-[#FFF7F0]" />
+
+                  <div className="flex items-center justify-center gap-2 text-xs font-semibold text-[#8A4B5C]">
+                    <span className="inline-block h-2 w-2 rounded-full bg-[#B86A7A]/70" />
+                    <span>Valentine update</span>
+                    <span className="inline-block h-2 w-2 rounded-full bg-[#B86A7A]/70" />
+                  </div>
+
+                  <p className="mt-3 text-center text-sm leading-relaxed text-[#6B4C55]">
+                    {dateDetails}
+                  </p>
                 </div>
               </div>
-
               <button
                 onClick={() => setOpen(false)}
                 className="mt-5 w-full rounded-2xl bg-[#B86A7A] px-5 py-3 font-bold text-white transition active:scale-[0.99]"
