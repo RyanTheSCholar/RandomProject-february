@@ -116,8 +116,22 @@ export default function App() {
   return (
     <div className="min-h-screen overflow-hidden bg-gradient-to-br from-[#FFFDF7] via-[#FFF7F0] to-[#F3E6DA] text-[#2B1B1F]">
       {/* ✅ Hidden Netlify form (Netlify detects this at build time) */}
-      <form name="valentine-yes" method="POST" data-netlify="true" hidden>
+      <form
+        name="valentine-yes"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        hidden
+      >
         <input type="hidden" name="form-name" value="valentine-yes" />
+
+        {/* honeypot field (spam trap) */}
+        <p>
+          <label>
+            Don’t fill this out: <input name="bot-field" />
+          </label>
+        </p>
+
         <input type="text" name="name" />
         <input type="text" name="timestamp" />
         <input type="text" name="page" />
@@ -166,7 +180,6 @@ export default function App() {
               className="relative mt-6 h-[120px] w-full max-w-[340px]"
             >
               <div className="flex h-full items-center justify-center">
-                {/* ✅ smaller on mobile, slightly bigger on larger screens */}
                 <button
                   ref={yesRef}
                   onClick={async () => {
@@ -213,7 +226,6 @@ export default function App() {
               if (e.target === e.currentTarget) setOpen(false);
             }}
           >
-            {/* ✅ mobile bottom sheet, centered on larger screens */}
             <div className="w-full rounded-t-3xl bg-[#FFF7F0] p-5 shadow-2xl sm:max-w-md sm:place-self-center sm:rounded-3xl sm:p-7">
               <div className="text-center">
                 <div className="text-5xl">😎</div>
