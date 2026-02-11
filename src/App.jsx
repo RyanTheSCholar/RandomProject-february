@@ -115,28 +115,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen overflow-hidden bg-gradient-to-br from-[#FFFDF7] via-[#FFF7F0] to-[#F3E6DA] text-[#2B1B1F]">
-      {/* ✅ Hidden Netlify form (Netlify detects this at build time) */}
-      <form
-        name="valentine-yes"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        netlify
-        hidden
-      >
-        <input type="hidden" name="form-name" value="valentine-yes" />
-
-        {/* honeypot field (spam trap) */}
-        <p>
-          <label>
-            Don’t fill this out: <input name="bot-field" />
-          </label>
-        </p>
-
-        <input type="text" name="name" />
-        <input type="text" name="timestamp" />
-        <input type="text" name="page" />
-      </form>
 
       {/* subtle floating specks */}
       <div className="pointer-events-none fixed inset-0">

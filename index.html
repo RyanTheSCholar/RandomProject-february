@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>valentine-site</title>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+ <body>
+  <form
+    name="valentine-yes"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    hidden
+  >
+    <input type="hidden" name="form-name" value="valentine-yes" />
+    <input name="bot-field" />
+    <input type="text" name="name" />
+    <input type="text" name="timestamp" />
+    <input type="text" name="page" />
+  </form>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>
