@@ -121,6 +121,7 @@ export default function App() {
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        netlify
         hidden
       >
         <input type="hidden" name="form-name" value="valentine-yes" />
